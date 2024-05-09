@@ -1,1 +1,5 @@
 # snippetbox
+
+## Usage 
+
+### Options/Flags
