@@ -26,8 +26,13 @@ func snippetView(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Display a specific snippet..."))
 }
 
-// Add a snippetCreate handler function
 func snippetCreate(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		w.Header().Set("Allow", http.MethodPost)
+		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
 	w.Write([]byte("Create a new snippet..."))
 }
 
