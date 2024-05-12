@@ -1,4 +1,4 @@
-# snippetbox
+# SnippetBox
 
 ## Table of Contents
 
